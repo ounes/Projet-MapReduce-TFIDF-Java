@@ -1,5 +1,5 @@
 # Tp TfIdf
-##Job 1 complete : calcul du nombre d'occurences des mots dans des documents
+## Job 1 complete : calcul du nombre d'occurences des mots dans des documents
 
 Input : dossier contenant des fichiers textes (`mobydick.txt` et `r_crusoe`)
 
@@ -14,9 +14,9 @@ Filtrer avec les critères suivants :
 
 Sortie : fichier contenant des lignes avec clé `<docID mot>` et valeur `<wordcount>`
 
-##Job 2 complete : calcul du nombre total de mots par document et insertion en fin de lignes
+## Job 2 complete : calcul du nombre total de mots par document et insertion en fin de lignes
 - Input : fichier de sortie du job 1
 - Output : Fichier contenant des lignes avec clé `<docID mot>` et valeur `<wordcount wordperdoc>`
-##Job 3 complete : calcul du tf_idf pour chaque mot
+## Job 3 complete : calcul du tf_idf pour chaque mot
 - Input : fichier de sortie du job 2
 - Output : fichier contenant des lignes avec clé `<docID mot>` et valeur `<tf_idf>`
