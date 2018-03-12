@@ -5,17 +5,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
-/*import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;*/
 import java.util.StringTokenizer;
-
 import org.apache.hadoop.fs.Path;
-//import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
-//import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
@@ -32,8 +24,6 @@ public class Map extends Mapper<Object, Text, CustomKey, IntWritable> {
 	@SuppressWarnings("deprecation")
 	protected void setup(Mapper<Object, Text, CustomKey, IntWritable>.Context context)
 			throws IOException, InterruptedException {
-		// fis = new BufferedReader(new
-		// FileReader("C:\\Users\\OUNES\\Desktop\\hadoop-2.9.0\\lib\\stopwords_en.txt"));
 		Path[] toto = context.getLocalCacheFiles();
 		if (toto != null && toto.length > 0) {
 			fis = new BufferedReader(new FileReader(toto[0].toString()));

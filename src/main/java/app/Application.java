@@ -43,14 +43,14 @@ public class Application {
 			throws IllegalArgumentException, IOException, ClassNotFoundException, InterruptedException {
 
 		Path inputFilePath = new Path(args[0]);
-		Path FilePathJob1 = new Path("result/result_job1");
-		Path outFilePathJob1 = new Path("result/result_job1/part-r-00000");
-		Path FilePathJob2 = new Path("result/result_job2");
-		Path outFilePathJob2 = new Path("result/result_job2/part-r-00000");
-		Path FilePathJob3 = new Path("result/result_job3");
-		Path outFilePathJob3 = new Path("result/result_job3/part-r-00000");
-		Path FilePathJob4 = new Path("result/result_job4");
-		Path outFilePathJob4 = new Path("result/result_job4/part-r-00000");
+		Path FilePathJob1 = new Path("/result/result_job1");
+		Path outFilePathJob1 = new Path("/result/result_job1/part-r-00000");
+		Path FilePathJob2 = new Path("/result/result_job2");
+		Path outFilePathJob2 = new Path("/result/result_job2/part-r-00000");
+		Path FilePathJob3 = new Path("/result/result_job3");
+		Path outFilePathJob3 = new Path("/result/result_job3/part-r-00000");
+		Path FilePathJob4 = new Path("/result/result_job4");
+		Path outFilePathJob4 = new Path("/result/result_job4/part-r-00000");
 		Path outputFilePath = new Path(args[1]);
 
 		// Suprime le fichier s'il existe
@@ -80,7 +80,7 @@ public class Application {
 			e.printStackTrace();
 		}
 
-		job.addCacheFile(new Path("stopword/stopwords_en.txt").toUri());
+		job.addCacheFile(new Path("/wordstop/stopwords_en.txt").toUri());
 
 		job.setInputFormatClass(TextInputFormat.class);
 		job.setOutputFormatClass(TextOutputFormat.class);
